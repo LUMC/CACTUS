@@ -8,8 +8,8 @@ CACTUS: Clonal Architecture of genomic Clustering of TUmor Single cells
 
 Varscan somatic variant calling of whole exome sequencing of FL and stromal samples produced the following files with mutation calls:
 
-- for subject [S144](WES/S144.vcf.gz)
-- for subject [S12118](WES/S12118.vcf.gz)
+- for subject [S144](input/WES/S144.vcf.gz)
+- for subject [S12118](input/WES/S12118.vcf.gz)
 
 ## scRNA-seq
 
