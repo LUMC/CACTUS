@@ -40,3 +40,28 @@ The following columns are important for the analysis:
 - `refAllele` is the reference genome base at the position
 - there are `cnt` transcripts with `base` nucleotide at the mutation position
 - `cell` is the identifier of a single cell
+
+
+## BCR and GEX clusterings
+
+BCR and GEX clusterings are provided in [input/scBCR_GEX.rds](input/scBCR_GEX.rds) file stored in R rds format.
+The file contains a single data frame with the following first lines:
+
+```
+   cell                   source subject cTypeHC cTypeLC genExprCluster
+   <fct>                  <fct>  <fct>   <fct>   <fct>   <fct>         
+ 1 K1B:AAACCTGAGCCAGTTT-1 K1B    S144    S144    S144.b  S144.0        
+ 2 K1B:AAACCTGGTATTAGCC-1 K1B    S144    S144.H  S144.d  S144.2        
+ 3 K1B:AAACGGGAGGATGGAA-1 K1B    S144    S144.E  S144.a  S144.0        
+ 4 K1B:AAACGGGCATAGACTC-1 K1B    S144    S144.A  S144.b  S144.2        
+ 5 K1B:AAACGGGCATTGGCGC-1 K1B    S144    S144.A  S144.f  S144.1        
+ 6 K1B:AAACGGGGTCTGCGGT-1 K1B    S144    S144.F  S144.d  S144.1  
+ ```
+
+Each row describes assignment of a single cell to a BCR heavy chain cluster or to gene expression cluster.
+The following columns are provided:
+
+- `cell` is the identifier of a single cell
+- `subject` describes from which subject the cell originates
+- `cTypeHC` is an identifier shared by cells with the same BCR sequence
+- `genExprCluster` is an identifier shared by cells with similar gene expression profile
