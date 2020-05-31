@@ -45,18 +45,18 @@ The following columns are important for the analysis:
 ## BCR and GEX clusterings
 
 BCR and GEX clusterings are provided in [input/scBCR_GEX.rds](input/scBCR_GEX.rds) file stored in R rds format.
-The file contains a single data frame with the following first lines:
+The file contains a list with elements corresponding to the studied subjects.
+Each list element is a single data frame of the following format:
 
 ```
-   cell                   source subject cTypeHC cTypeLC genExprCluster
-   <fct>                  <fct>  <fct>   <fct>   <fct>   <fct>         
- 1 K1B:AAACCTGAGCCAGTTT-1 K1B    S144    S144    S144.b  S144.0        
- 2 K1B:AAACCTGGTATTAGCC-1 K1B    S144    S144.H  S144.d  S144.2        
- 3 K1B:AAACGGGAGGATGGAA-1 K1B    S144    S144.E  S144.a  S144.0        
- 4 K1B:AAACGGGCATAGACTC-1 K1B    S144    S144.A  S144.b  S144.2        
- 5 K1B:AAACGGGCATTGGCGC-1 K1B    S144    S144.A  S144.f  S144.1        
- 6 K1B:AAACGGGGTCTGCGGT-1 K1B    S144    S144.F  S144.d  S144.1  
- ```
+                     cell source subject cTypeHC cTypeLC genExprCluster
+2  K1B:AAACCTGAGCCAGTTT-1    K1B    S144      u1       b              0
+4  K1B:AAACCTGAGGCATGTG-1    K1B    S144       C       s              3
+11 K1B:AAACCTGGTATTAGCC-1    K1B    S144       H       d              2
+19 K1B:AAACCTGTCTGGGCCA-1    K1B    S144      u2       c              1
+22 K1B:AAACGGGAGGATGGAA-1    K1B    S144       E       a              0
+24 K1B:AAACGGGCATAGACTC-1    K1B    S144       A       b              2
+```
 
 Each row describes assignment of a single cell to a BCR heavy chain cluster or to gene expression cluster.
 The following columns are provided:
