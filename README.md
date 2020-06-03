@@ -11,6 +11,8 @@ Varscan somatic variant calling of whole exome sequencing of FL and stromal samp
 - for subject [S144](input/WES/S144.vcf.gz)
 - for subject [S12118](input/WES/S12118.vcf.gz)
 
+Using Varscan output, we also generated the r object of the mutations for both subjects provided in [input/WES/wes.rds](input/WES/wes.rds)
+
 ## scRNA-seq
 
 Allele transcript counts are provided in [input/scRNA/ac.rds](input/scRNA/ac.rds) file.
@@ -65,3 +67,40 @@ The following columns are provided:
 - `subject` describes from which subject the cell originates
 - `cTypeHC` is an identifier shared by cells with the same BCR sequence
 - `genExprCluster` is an identifier shared by cells with similar gene expression profile
+
+## Genotype of the clones
+
+Genotype of the clones are inferred using [canopy](https://github.com/yuchaojiang/Canopy) method and the result are provided in [input/tree](input/tree). The file contains a list of trees which canopy returns. Each list element is a single data frame of the following format:
+
+```
+                clone1 clone2 clone3 clone4 clone5
+chr1 1218897         0      1      0      0      0
+chr1 15929547        0      0      0      1      1
+chr1 16395227        0      1      0      0      0
+chr1 21233759        0      1      0      0      0
+chr1 33013252        0      0      0      0      1
+chr1 33013270        0      0      1      0      0
+chr1 33013276        0      0      1      0      0
+
+```
+Genotype is a zero/one matrix and each row describes mapping a mutation position to one or more clones. 
+
+# Running
+
+CACTUS, modified [cardelino](https://github.com/single-cell-genetics/cardelino) to take advantage of having information about clustering of the cells (here, BCR clonotypes). CACTUS can be run for the existing data in the code directory using the following script: 
+
+```
+bash cactus_parallel_samples.sh  'WES R-object file'  'Allele transcript counts'  'result directory'  'genotype directory' 'Clustering file' 
+```
+The argumans of the bash script ('WES R-object file', 'Allele transcript counts', 'genotype directory')  are explained in the input section. 'result directory' is the name for the directory which will be generated for the results of CACTUS.
+
+
+## Test
+
+For the data provided in this repository, the following command can be used:
+
+```
+bash cactus_parallel_samples.sh  "../input/WES/wes.rds"  "../input/scRNA/ac.rds"  "../results/"   "../tree/"  "../input/scBCR_GEX.rds" 
+```
+
+
