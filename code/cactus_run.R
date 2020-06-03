@@ -18,7 +18,7 @@ relax_rate_prior <- c(as.numeric(args[7], digits=15),as.numeric(args[8], digits=
 dir.create(CACTUSDIR)
 subject <- args[5]
 
-Z <- readRDS(paste0(CANOPY,subject,"/cardelinoZ.rds"))
+Z <- readRDS(paste0(CANOPY,subject,"/Z.rds"))
 RESULTS <- paste0(CACTUSDIR,subject,"/")
 dir.create(RESULTS)
 sample <- wes_inter[[subject]]
