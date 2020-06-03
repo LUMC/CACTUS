@@ -14,7 +14,7 @@ nTree = 30
 cell_cluster <- readRDS(args[6])
 #whichCluster could be a arg for more than one  clusters 
 whichCluster <- 1
-relax_rate_prior <- c(as.numeric(args[7], digits=15),as.numeric(args[8], digits=15))
+relax_rate_prior <- c(0.5,9.5)#c(as.numeric(args[7], digits=15),as.numeric(args[8], digits=15))
 dir.create(CACTUSDIR)
 subject <- args[5]
 
