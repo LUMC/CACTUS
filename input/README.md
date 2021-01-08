@@ -75,7 +75,7 @@ Each list element is a single data frame of the following format:
 24 K1B:AAACGGGCATAGACTC-1    K1B    S144       A       b              2
 ```
 
-Each row describes an assignment of a single cell to a BCR heavy chain cluster or to gene expression cluster.
+Each row describes an assignment of a single cell to a BCR heavy chain cluster or to gene expression cluster.  
 The following columns are provided:
 
 - `cell` is the identifier of a single cell
