@@ -1,7 +1,7 @@
 # CACTUS Input files
 
-This is the directory containing input data necessary to reproduce analysis presented in the manuscript:
-  **CACTUS: integrating clonal architecture with genomic clustering and transcriptome profiling of single tumor cells**
+This is the directory containing input data necessary to reproduce analysis presented in the manuscript:  
+  **CACTUS: integrating clonal architecture with genomic clustering and transcriptome profiling of single tumor cells**  
   Shadi Darvish Shafighi, Szymon M Kiełbasa, Julieta Sepúlveda Yáñez, Ramin Monajemi, Davy Cats, Hailiang Mei, Roberta Menafra, Susan Kloet, Hendrik Veelken, Cornelis A.M. van Bergen, Ewa Szczurek
 
 Two patients (denoted `S144` and `S12118`) suffering from follicular lymphoma (FL) are studied.
