@@ -1,6 +1,6 @@
 # CACTUS Input files
 
-This is the directory containing input data necessary to reproduce analysis presented in the manuscript:  
+This is the directory containing input data necessary to reproduce analyses presented in the manuscript:  
 
 > **CACTUS: integrating clonal architecture with genomic clustering and transcriptome profiling of single tumor cells**  
 > Shadi Darvish Shafighi, Szymon M Kiełbasa, Julieta Sepúlveda Yáñez, Ramin Monajemi, Davy Cats, Hailiang Mei, Roberta Menafra, Susan Kloet, Hendrik Veelken, Cornelis A.M. van Bergen, Ewa Szczurek
@@ -11,30 +11,30 @@ Two patients (denoted `S144` and `S12118`) suffering from follicular lymphoma (F
 
 [VarScan](http://varscan.sourceforge.net/) somatic variant calling of whole exome sequencing of FL and stromal samples produced the following mutation calls:
 
-- for subject [S144](input/WES/S144.vcf.gz)
-- for subject [S12118](input/WES/S12118.vcf.gz)
+- for subject [S144](WES/S144.vcf.gz)
+- for subject [S12118](WES/S12118.vcf.gz)
 
-Using VarScan output, we also generated the R object of the mutations for both subjects provided in [input/WES/wes.rds](input/WES/wes.rds).
+Using VarScan output, we also generated the R object of the mutations for both subjects provided in [WES/wes.rds](WES/wes.rds).
 
 ## Copy number analysis
 
 [Falconx](https://cran.r-project.org/web/packages/falconx/index.html) produced copy number regarding each chromosome which can be found here:
 
-- for subject [S144](input/CopyNumber/S144)
-- for subject [S12118](input/CopyNumber/S12118)
+- for subject [S144](CopyNumber/S144)
+- for subject [S12118](CopyNumber/S12118)
 
 We also produced the R objects of the whole chromosomes for both subjects:
 
-- for subject [S144](input/CopyNumber/S144.rds)
-- for subject [S12118](input/CopyNumber/S12118.rds)
+- for subject [S144](CopyNumber/S144.rds)
+- for subject [S12118](CopyNumber/S12118.rds)
 
 ## scRNA-seq
 
-Allele-specific transcript counts are provided in [input/scRNA/ac.rds](input/scRNA/ac.rds) file.
+Allele-specific transcript counts are provided in [scRNA/ac.rds](scRNA/ac.rds) file.
 The file is provided in the R rds format. The contents represent a list which can be loaded with the following command:
 
 ```{r}
-l <- readRDS("input/scRNA/ac.rds")
+l <- readRDS("scRNA/ac.rds")
 ```
 
 The list contains two data frames corresponding to each of the subjects.
@@ -61,7 +61,7 @@ The following columns are important for the analysis:
 
 ## BCR and GEX clusterings
 
-BCR and GEX clusterings are provided in [input/scBCR_GEX.rds](input/scBCR_GEX.rds) file stored in R rds format.  
+BCR and GEX clusterings are provided in [scBCR_GEX.rds](scBCR_GEX.rds) file stored in R rds format.  
 The file contains a list with elements corresponding to the studied subjects.  
 Each list element is a single data frame of the following format:
 
@@ -85,7 +85,7 @@ The following columns are provided:
 
 ## Genotype of the clones
 
-Genotype of the clones are inferred using [canopy](https://github.com/yuchaojiang/Canopy) method and the results are provided in [input/tree](input/tree).  
+Genotype of the clones are inferred using [canopy](https://github.com/yuchaojiang/Canopy) method and the results are provided in [tree](tree).  
 The file contains a list of trees which canopy returns.  
 Each list element is a single data frame of the following format:
 
