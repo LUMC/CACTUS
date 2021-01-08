@@ -61,7 +61,7 @@ The following columns are important for the analysis:
 
 ## BCR and GEX clusterings
 
-BCR and GEX clusterings are provided in [scBCR_GEX.rds](scBCR_GEX.rds) file stored in R rds format.  
+BCR and GEX clusterings are provided in [scBCR/scBCR_GEX.rds](scBCR/scBCR_GEX.rds) file stored in R rds format.  
 The file contains a list with elements corresponding to the studied subjects.  
 Each list element is a single data frame of the following format:
 
