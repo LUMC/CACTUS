@@ -14,7 +14,7 @@ Two patients (denoted `S144` and `S12118`) suffering from follicular lymphoma (F
 - for subject [S144](WES/S144.vcf.gz)
 - for subject [S12118](WES/S12118.vcf.gz)
 
-Using VarScan output, we also generated the R object of the mutations for both subjects provided in [WES/wes.rds](WES/wes.rds).
+Using VarScan output, we also generated the R object of the selected mutations for both subjects provided in [WES/wes.rds](WES/wes.rds). We selected mutations with somatic p-value (SPV in Varscan) less than 0.1 which have seen in the single-cell data as well. 
 
 ## Copy number analysis
 
