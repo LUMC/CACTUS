@@ -13,6 +13,19 @@ Varscan somatic variant calling of whole exome sequencing of FL and stromal samp
 
 Using Varscan output, we also generated the r object of the mutations for both subjects provided in [input/WES/wes.rds](input/WES/wes.rds)
 
+## Copy number analysis
+
+Falconx produced copy number regarding each chromosome which can be found here: 
+
+- for subject [S144](input/CopyNumber/S144)
+- for subject [S12118](input/CopyNumber/S12118)
+
+We also produced the r object of the whole chromosome for both subjects:
+
+- for subject [S144](input/CopyNumber/S144.rds)
+- for subject [S12118](input/CopyNumber/S12118.rds)
+
+
 ## scRNA-seq
 
 Allele transcript counts are provided in [input/scRNA/ac.rds](input/scRNA/ac.rds) file.
