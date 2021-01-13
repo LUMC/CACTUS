@@ -10,8 +10,8 @@ It additionally takes advantage of having information about clustering of the ce
 
 # Input files
 
-Input files are provided in a separate [git repository CACTUS-data](https://github.com/LUMC/CACTUS-data) referenced as a git submodule in directory [input](input).  
-The [input/README.md](input/README.md) file provides description of the input files.
+Input files are provided in a separate [git repository CACTUS-data](https://github.com/LUMC/CACTUS-data) referenced as a git submodule in directory `input`.  
+The [input/README.md](https://github.com/LUMC/CACTUS-data/README.md) file provides description of the input files.
 
 # Running
 
