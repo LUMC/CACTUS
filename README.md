@@ -5,8 +5,7 @@ This is the directory containing source code necessary to reproduce analyses pre
 > **CACTUS: integrating clonal architecture with genomic clustering and transcriptome profiling of single tumor cells**  
 > Shadi Darvish Shafighi, Szymon M Kiełbasa, Julieta Sepúlveda Yáñez, Ramin Monajemi, Davy Cats, Hailiang Mei, Roberta Menafra, Susan Kloet, Hendrik Veelken, Cornelis A.M. van Bergen, Ewa Szczurek
 
-CACTUS, is a modified [cardelino](https://github.com/single-cell-genetics/cardelino) medthod.  
-It additionally takes advantage of having information about clustering of the cells (here, BCR clonotypes).  
+CACTUS extends [cardelino](https://github.com/single-cell-genetics/cardelino) and maps single cells to their clones based on comparing the allele specific transcript counts on mutated positions to given clonal genotypes. It additionally takes advantage of having information about clustering of the cells (here, BCR clonotypes).  
 
 # Input files
 
